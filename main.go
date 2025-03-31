@@ -43,7 +43,9 @@ func main() {
 
 	fmt.Println("初始化 Docker 客户端")
 	
-	fmt.Printf(*repository, *username, *password)
+	fmt.Println("初始化 Docker 客户端", *repository)
+	fmt.Println("初始化 Docker 客户端", *username)
+	fmt.Println("初始化 Docker 客户端", *password)
 	
 	cli, err := pkg.NewCli(context.Background(), *repository, *username, *password, os.Stdout)
 	if err != nil {
